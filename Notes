@@ -1,0 +1,25 @@
+Multiple Payments
+
+1 Order -> M payments
+1 User -> M payments
+
+1 Payment -> M Users :: NO
+1 Payment -> M Orders :: NO
+
+Order: Payment -> 1:M
+User : Payment -> 1:M
+
+
+Payment
+id
+amount
+Currency
+userId
+orderId
+TransactionId // payment gateway
+PaymentStatus // -> SUCCESS , FAILED , RECONCILED , PENDING , REFUNDED
+updatedAt
+createdAt
+
+Currency -> Enum or Table , currency will be entity e   w
+PaymentStatus -> Enum or Table it will be Enum
