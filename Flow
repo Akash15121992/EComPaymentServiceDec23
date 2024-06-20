@@ -1,0 +1,14 @@
+1. API -> doPayment
+Request Body -> all the required details
+
+API would would be called from OrderService
+
+Order -> Product -> PaymentGateway -> payment link is received , open the link to do the payment
+
+1. What details are received from Order Service?
+2. Once we get the entry to payment service , before calling the payment gateway , insert a payment entry
+inside the Payment table in Payment service status will be in progress
+3. Once the payment is done , we will have callback URL on payment service
+4. This callback URL will update the entry made on payment table earlier i.e update the payment status when
+payment request was done.
+5 . Extra calls we need to do will be in the flow of callback url.
